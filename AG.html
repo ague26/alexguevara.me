@@ -42,8 +42,9 @@
 			}
 			.top #profile{
 				/*position: absolute;*/
-			    top: 15px; left: 0; right:0;
-			    margin: auto;
+			    top: 15px; 
+			    margin-top: 15px;
+			    margin-left: 50px;
 				/*display: block;
 				margin: 0 auto;*/
 				height:220px;
@@ -55,11 +56,12 @@
 				/*background-image: url("background.jpeg");*/
 			}
 			.top .logo{
-				float:right;
+				/*float:right;*/
 				height: 100px;
 				width:300px;
 				display: inline-block;
-				position: relative;
+				margin-left: 50px;
+				/*position: relative;*/
 				/*margin-top:20px;*/
 				/*background-image: url("background.jpeg");*/
 				/*margin-left: auto;
@@ -70,6 +72,7 @@
 				width: 160px;
 				height:100px;
 				margin-left: 25px;
+				margin-top: -20px;
 				/*margin:auto;*/
 			}
 			.top .logo .wrap #linkedin{
@@ -83,7 +86,7 @@
 			}
 			.middle{
 				width:100%;
-				height:520px;
+				height:400px;
 				position: absolute;
 				margin-top: 150px;
 			}
@@ -91,12 +94,12 @@
 				margin-left: auto;
 				margin-right: auto;
 				width:500px;
-				height:450px;
+				height:380px;
 				background-color: white;
 			}
 			.middle .bio p{
 				width:500px;
-				height:500px;
+				height:380px;
 				overflow-wrap: break-word; 
 			}
 			.slideout-menu {
@@ -106,7 +109,7 @@
 			  width: 256px;
 			  /*margin-left: 30px;
 			  margin-top: 10px;*/
-			  background-color: orange;
+			  background-color: rgba(96,96,96,1);
 			  /*min-height: 100vh;*/
 			  /*overflow-y: scroll;*/
 			  -webkit-overflow-scrolling: touch;
@@ -114,19 +117,46 @@
 			  display: none;
 			  color: white;
 			}
-			.slideout-menu h1{
+			.slideout-menu .fname{
 				margin-left: 20px;
 				margin-top: 20px;
 			}
-
+			.slideout-menu .lname{
+				margin-left: 100px;
+				margin-top: 0px;
+			}
+			.slideout-menu .menu_listing{
+				height: 500px;
+				width:200px;
+				margin:auto;
+				margin-top: 20px;
+			}
+			.slideout-menu .listing{
+				margin-left: 10px;
+				list-style-type: none;
+				font-size: 20px;
+			}
+			.slideout-menu .listing #title{
+				margin-top: 30px;
+				
+			}
+			.slideout-menu #nest{
+			list-style-type: none;
+			margin-left: 20px;
+			margin-top:4px;
+			}
+			.slideout-menu #nest:before{
+				content: '-';
+				position: absolute;
+				margin-left: -15px;
+			}
+			.slideout-menu .listing a{
+				color:white;
+				text-decoration: none;
+			}
 			.slideout-menu-left {
 			  left: 0;
 			}
-
-			.slideout-menu-right {
-			  right: 0;
-			}
-
 			.slideout-panel {
 				height: 200px;
 				width:200px;
@@ -199,9 +229,28 @@
 	</head>
 
 	<body>
-		<nav id="menu">
-      		<h1>Alexander Guevara</h1>
-   		</nav>
+		<div id="menu">
+      		<h1 class="fname">Alexander</h1>
+      		<h1 class="lname">Guevara</h1>
+      		<div class="menu_listing">
+      			<ul class="listing">
+      				<li id="title">Technical Skills</li>
+      				<ul>
+  						<li id="nest">Computer/Mobile technician</li>
+  						<li id="nest">Web Designer</li>
+  						<li id="nest">Web Developer</li>
+  						<li id="nest">Mobile Developer</li>
+      				</ul>
+      				<li id="title">Clients</li>
+      					<ul>
+      						<li id="nest">Linda Soza- work in progress website
+      					</ul>
+      				<li id="title"><a href='"file:///C:\\Desktop\HTML\alexguevara.me\Alexander_Guevara_2017.docx"'>Resume</a></li>	
+      				<li id="title">Lets Play a Game!</li>	
+      				
+      			</ul>
+      		</div>	
+   		</div>
 
 	    <div id="panel">
 	      
@@ -234,8 +283,8 @@
 				<img id="profile" src="profile.jpg">
 				<div class="logo">
 					<div class="wrap">
-						<a href="https://www.linkedin.com"><img id = "linkedin" src="linkedin.png"></a>
-						<a href="https://www.github.com"><img id = "octocat" src="octocat.png"></a>
+						<a href="https://www.linkedin.com/in/alexanderguevara/"><img id = "linkedin" src="linkedin.png"></a>
+						<a href="https://github.com/ague26"><img id = "octocat" src="octocat.png"></a>
 					</div>	
 				</div>
 			</div>
