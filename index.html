@@ -17,68 +17,49 @@
 			body{
 				background-image: url("background.jpeg");
 				background-size: cover;
-				/*background-repeat: no-repeat;*/
+				
 			}
 			.top{
 				margin-left: auto;
 				margin-right:auto;
-				height:240px;
+				height:400px;
 				width:100%;
-				position: fixed;
 				z-index: 999;
-				/*margin-top: -200px;*/
-				/*background-image: url("background.jpeg");*/
-				/*background-size: contain;
-				opacity: .6;*/
+				margin-top: -200px;
 			}
 			
 			.topmiddle {
-				height:250px;
-				width:400px;
-				/*position: absolute;*/
+				height:400px;
+				width:500px;
 				margin: auto;
-				margin-top: -200px;
-				/*background-image: url("background.jpeg");*/
+				margin-top: 20px;
+			}
+			.top .profilewrap{
+				width: 300px;
+				height:350px;
+				margin: auto;
 			}
 			.top #profile{
-				/*position: absolute;*/
 			    top: 15px; 
-			    margin-top: 15px;
-			    margin-left: 50px;
-				/*display: block;
-				margin: 0 auto;*/
+			    margin-top: 108px;
 				height:220px;
 				width:290px;
 				border-radius: 50%;
 				border: solid 2px white;
-				/*margin-left:auto;*/
-				/*margin-top: -200px;*/
-				/*background-image: url("background.jpeg");*/
 			}
 			.top .logo{
-				/*float:right;*/
-				height: 100px;
-				width:300px;
+				height: 50px;
+				width:100%;
 				display: inline-block;
-				margin-left: 50px;
-				/*position: relative;*/
-				/*margin-top:20px;*/
-				/*background-image: url("background.jpeg");*/
-				/*margin-left: auto;
-				margin-right: auto;*/
-				/*top: 15px; left: 0; right:0;*/
 			} 
 			.top .logo .wrap{
 				width: 160px;
-				height:100px;
-				margin-left: 25px;
-				margin-top: -20px;
-				/*margin:auto;*/
+				height:50px;
+				margin:auto;
 			}
 			.top .logo .wrap #linkedin{
 				height: 50px;
 				width: 50px;
-				margin-top: 35px;
 			}
 			.top .logo .wrap #octocat{
 				height: 50px;
@@ -86,32 +67,35 @@
 			}
 			.middle{
 				width:100%;
-				height:400px;
+				height:375px;
 				position: absolute;
-				margin-top: 150px;
+				margin-top: 30px;
 			}
 			.middle .bio{
 				margin-left: auto;
 				margin-right: auto;
 				width:500px;
-				height:380px;
-				background-color: white;
+				height:395px;
+				background-color: #f5fffa;
 			}
 			.middle .bio p{
-				width:500px;
-				height:380px;
-				overflow-wrap: break-word; 
+				color:black;
+				font-size: 20px;
+				margin: auto;
+				width:90%;
+				height:170px;
+				padding-top: 10px; 
+				/*overflow-wrap: break-word;*/
+			}
+			.middle .bio p:nth-of-type(2){
+				height: 100px;
 			}
 			.slideout-menu {
 			  position: fixed;
 			  top: 0;
 			  bottom: 0;
 			  width: 256px;
-			  /*margin-left: 30px;
-			  margin-top: 10px;*/
 			  background-color: rgba(96,96,96,1);
-			  /*min-height: 100vh;*/
-			  /*overflow-y: scroll;*/
 			  -webkit-overflow-scrolling: touch;
 			  z-index: 0;
 			  display: none;
@@ -158,32 +142,32 @@
 			  left: 0;
 			}
 			.slideout-panel {
-				height: 200px;
-				width:200px;
-				/*margin-top: 100px;*/
-				/*border-style: none;*/
+				height: 100px;
+				width:100px;
 			  position: relative;
 			  z-index: 1;
 			  will-change: transform;
-			  /*min-height: 100vh;*/
 			}
 
 			.slideout-open,
 			.slideout-open body,
 			.slideout-open .slideout-panel {
-			  overflow: hidden;
-			  /*margin-top: 100px;*/
 			}
 
 			.slideout-open .slideout-menu {
 			  display: block;
 			}
 			.hamburgermenu{
+				width:100px;
+				height:100px;
+				background-color: transparent;
 				border-style: none;
-				margin-top: 50px;
-				margin-left: 50px;
+			}
+			.hamburgermenu:focus{
+				outline: none;
 			}
 			.hamburger-box {
+			  margin: auto; 
 			  width: 40px;
 			  height: 24px;
 			  display: block;
@@ -206,7 +190,6 @@
 				background-color: red;
 				border-radius: 10px;
 				position: absolute;
-				/*border-bottom: thick dotted #ff0000;*/
 				transition-property: transform;
 				transition-duration: 0.15s;
 				transition-timing-function: ease; 
@@ -223,6 +206,72 @@
 			.hamburger-inner::after {
 				bottom: -10px; 
 			}
+		@media screen and (max-width: 700px) {
+			.slideout-panel{
+				height: 50px;
+				width: 50px;
+			}
+			.hamburgermenu{
+			height:50px;
+			width: 50px;
+			background-color: transparent;
+			}
+			.top{
+				height:332px;
+			}
+			.top .topmiddle{
+				height:100%;
+				width:270px;
+			}
+			.top .profilewrap{
+				height:303px;
+				width: 234px;
+			}
+			.top #profile{
+				margin-top: 138px;
+				height:160px;
+				width:230px;
+			}
+			.top .logo{
+				height:34px;
+			}
+			.top .logo .wrap{
+				height:100%;
+				width:112px;
+			}
+			.top .logo .wrap #linkedin{
+				height: 34px;
+				width: 34px;
+			}
+			.top .logo .wrap #octocat{
+				height: 34px;
+				width: 74px;
+			}
+			
+			.slideout-open,
+			.slideout-open body,
+			.slideout-open .slideout-panel {
+			  overflow: hidden;
+			  margin-right: -50px;
+			}
+			.middle{
+				position: unset;
+			}
+			.middle .bio{
+				width:100%;
+				height:100%;
+			}
+			.middle .bio p{
+				height:unset;
+				width:82%;
+				margin:auto;
+				font-size: 15px;
+				padding-bottom: 3px;
+			}
+			.middle .bio p:nth-of-type(2){
+				height: 85px;
+			}
+		}
 
 		</style>
 
@@ -245,8 +294,8 @@
       					<ul>
       						<li id="nest">Linda Soza- work in progress website
       					</ul>
-      				<li id="title"><a href='"file:///C:\\Desktop\HTML\alexguevara.me\Alexander_Guevara_2017.docx"'>Resume</a></li>	
-      				<li id="title">Lets Play a Game!</li>	
+      				<!-- <li id="title"><a href="https://www.dropbox.com/s/da5ruvgvrzcx3e4/Alexander_Guevara_Resume_2017.pdf?dl=0">Resume</a></li>	 -->
+      					
       				
       			</ul>
       		</div>	
@@ -280,7 +329,10 @@
 		<div class="top">
 
 			<div class= "topmiddle">
-				<img id="profile" src="profile.jpg">
+				<div class="profilewrap">
+					<img id="profile" src="profile.jpg">
+				</div>
+
 				<div class="logo">
 					<div class="wrap">
 						<a href="https://www.linkedin.com/in/alexanderguevara/"><img id = "linkedin" src="linkedin.png"></a>
@@ -293,8 +345,12 @@
 
 		<div class="middle">
 			<div class="bio">
-				<p> WordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWordsWords
-				</p>
+				<p> Hey! My name is Alexander Guevara, and I am an inspring web/mobile developer. Born and raised in NYC, I have experienced the many cultural diversity,art,food, and festivities it has to show. Always entering with an open-mind, I enjoy listening to the stories/adventures of people's lives as each and every person has a unique story to tell.</p>
+
+				<p> In my personal time I enjoy playing in nature's own playground. Hiking through its' mountainous trails, or getting lost in one of their roads, I take every excapade as an added chapter to my life. </p>
+
+				<p>Aside from this, I also participate in projects in developing data structures, websites, and mobile apps. Take a look at my <a href="https://www.dropbox.com/s/kllwl0hlaoglnlr/Resume_2017.pdf?dl=0">Resume</a> or my other social links above.</p>
+				
 			</div>
 		</div>	
 	<body>
