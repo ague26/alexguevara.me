@@ -8,360 +8,106 @@
 		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 		  crossorigin="anonymous">
 		</script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,400" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script>
+
+			$(document).ready(function() {
+					$("#name").animate({left: '+=50%'}, 2000);
+	   				$("#bar").animate({left: '+=83%'}, 2000);
+	   				$("#upbar").animate({top: '+=100vh'}, 2000);
+				});
+			$(document).ready(function(){
+				$('#hamburger').hover(function(){
+					$('li').css({'width':'95%','transition-duration':'.5s'});
+					}, function(){
+					$('li:nth-child(1)').css({'width':'85%','transition-duration':'.5s'}),
+					$('li:nth-child(3)').css({'width':'78%','transition-duration':'.5s'});
+				});
+			});
+			$(document).ready(function() {
+				$('body').scroll(function(){
+					$('#upbar').animate({top:'+=200vh'})
+				});
+			});
+
+			$(document).ready(function(){
+		   		$("button").click(function(){
+			        var x = ($(window).scrollTop());
+
+			        if ($(window).scrollTop() > 220){
+			        	$('#upbar').css({"height":"120vh"})
+			        }
+			        else{
+			        	alert( x)
+			        }
+			        
+			    	});
+			});
+			
+		</script>
 		<style>
 			*{
-				margin:0;
-				padding:0;
+			margin:0;
+			padding:0;
 			}
-			body{
-				background-image: url("background.jpeg");
-				background-size: 1300px 1000px;
-				background-repeat: no-repeat;
-				
-			}
-			.top{
-				margin-left: auto;
-				margin-right:auto;
-				height:400px;
-				width:100%;
-				z-index: 999;
-				margin-top: -200px;
-			}
-			
-			.topmiddle {
-				height:400px;
-				width:500px;
-				margin: auto;
-				margin-top: 20px;
-			}
-			.top .profilewrap{
-				width: 300px;
-				height:350px;
-				margin: auto;
-			}
-			.top #profile{
-			    top: 15px; 
-			    margin-top: 108px;
-				height:220px;
-				width:290px;
-				border-radius: 50%;
-				border: solid 2px white;
-			}
-			.top .logo{
-				height: 50px;
-				width:100%;
-				display: inline-block;
-			} 
-			.top .logo .wrap{
-				width: 160px;
-				height:50px;
-				margin:auto;
-			}
-			.top .logo .wrap #linkedin{
-				height: 50px;
-				width: 50px;
-			}
-			.top .logo .wrap #octocat{
-				height: 50px;
-				width: 90px;
-			}
-			.middle{
-				width:100%;
-				height:80%;
-				/*position: absolute;*/
-				margin-top: 30px;
-			}
-			.middle .bio{
-				margin-left: auto;
-				margin-right: auto;
-				width:500px;
-				height:530px;
-				background-color: #f5fffa;
-				text-align: center;
-
-			}
-			.middle .bio p{
-				color:black;
-				font-size: 20px;
-				margin: auto;
-				width:90%;
-				height:170px;
-				padding-top: 10px; 
-				/*overflow-wrap: break-word;*/
-			}
-			.middle .bio .p .dark_bold {
-				font: bold ; 
-			}
-			
-			.slideout-menu {
-			  position: fixed;
-			  top: 0;
-			  bottom: 0;
-			  width: 256px;
-			  background-color: rgba(96,96,96,1);
-			  -webkit-overflow-scrolling: touch;
-			  z-index: 0;
-			  display: none;
-			  color: white;
-			}
-			.slideout-menu .fname{
-				margin-left: 20px;
-				margin-top: 20px;
-			}
-			.slideout-menu .lname{
-				margin-left: 100px;
-				margin-top: 0px;
-			}
-			.slideout-menu .menu_listing{
-				height: 500px;
-				width:200px;
-				margin:auto;
-				margin-top: 20px;
-			}
-			.slideout-menu .listing{
-				margin-left: 10px;
-				list-style-type: none;
-				font-size: 20px;
-			}
-			.slideout-menu .listing #title{
-				margin-top: 30px;
-				
-			}
-			.slideout-menu #nest{
-			list-style-type: none;
-			margin-left: 20px;
-			margin-top:4px;
-			}
-			.slideout-menu #nest:before{
-				content: '-';
-				position: absolute;
-				margin-left: -15px;
-			}
-			.slideout-menu .listing a{
-				color:white;
-				text-decoration: none;
-			}
-			.slideout-menu-left {
-			  left: 0;
-			}
-			.slideout-panel {
-				height: 100px;
-				width:100px;
-			  position: relative;
-			  z-index: 1;
-			  will-change: transform;
-			}
-
-			.slideout-open,
-			.slideout-open body,
-			.slideout-open .slideout-panel {
-			}
-
-			.slideout-open .slideout-menu {
-			  display: block;
-			}
-			.hamburgermenu{
-				width:100px;
-				height:100px;
-				background-color: transparent;
-				border-style: none;
-			}
-			.hamburgermenu:focus{
-				outline: none;
-			}
-			.hamburger-box {
-			  margin: auto; 
-			  width: 40px;
-			  height: 24px;
-			  display: block;
-			  position: relative; 
-			  background-color: rgb(3,46,61);
-			  border-style: none;
-			  cursor: pointer;
-
-			}
-			.hamburger-inner {
-			  display: block;
-			  top: 50%;
-			  margin-top: -2px;
-
-			}
-			.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-				border-style: none;
-				width: 40px;
-				height: 4px;
-				background-color: red;
-				border-radius: 10px;
-				position: absolute;
-				transition-property: transform;
-				transition-duration: 0.15s;
-				transition-timing-function: ease; 
-
-			}
-			.hamburger-inner::before, .hamburger-inner::after {
-				content: "";
-				display: block;
-				border-style: none;
-			}
-			.hamburger-inner::before {
-				top: -10px; 
-			}
-			.hamburger-inner::after {
-				bottom: -10px; 
-			}
-		@media screen and (max-width: 700px) {
-			.slideout-panel{
-				height: 50px;
-				width: 50px;
-			}
-			.hamburgermenu{
-			height:50px;
-			width: 50px;
-			background-color: transparent;
-			}
-			.top{
-				height:332px;
-			}
-			.top .topmiddle{
-				height:100%;
-				width:270px;
-			}
-			.top .profilewrap{
-				height:303px;
-				width: 234px;
-			}
-			.top #profile{
-				margin-top: 138px;
-				height:160px;
-				width:230px;
-			}
-			.top .logo{
-				height:34px;
-			}
-			.top .logo .wrap{
-				height:100%;
-				width:113px;
-			}
-			.top .logo .wrap #linkedin{
-				height: 34px;
-				width: 34px;
-			}
-			.top .logo .wrap #octocat{
-				height: 34px;
-				width: 74px;
-			}
-			
-			.slideout-open,
-			.slideout-open body,
-			.slideout-open .slideout-panel {
-			  overflow: hidden;
-			  margin-right: -50px;
-			}
-			.middle{
-				position: unset;
-			}
-			.middle .bio{
-				width:100%;
-				height:100%;
-			}
-			.middle .bio p{
-				height:unset;
-				width:82%;
-				margin:auto;
-				font-size: 15px;
-				padding-bottom: 3px;
-			}
-			
-		}
-
 		</style>
-
 	</head>
 
+
 	<body>
-		<div id="menu">
-      		<h1 class="fname">Alexander</h1>
-      		<h1 class="lname">Guevara</h1>
-      		<div class="menu_listing">
-      			<ul class="listing">
-      				<li id="title">Technical Skills</li>
-      				<ul>
-  						<li id="nest">Computer/Mobile technician</li>
-  						<li id="nest">Web Designer</li>
-  						<li id="nest">Web Developer</li>
-  						<li id="nest">Mobile Developer</li>
-      				</ul>
-      				<li id="title">Clients</li>
-      					<ul>
-      						<li id="nest">Linda Soza- work in progress website
-      					</ul>
-      				<a href= "gallery.html">
-      					<p>Gallery</p> 
-      				</a>
-      					
-      				
-      			</ul>
-
-
-      		</div>	
-   		</div>
-
-	    <div id="panel">
-	      
-	        <button class="hamburgermenu" >
-			  <span class="hamburger-box">
-			    <span class="hamburger-inner"></span>
-			  </span>
-			</button>  
-	      
-	    </div>
-
-    <script>
-      var slideout = new Slideout({
-        'panel': document.getElementById('panel'),
-        'menu': document.getElementById('menu'),
-        'padding': 256,
-        'tolerance': 70,
-        'duration':500,
-      });
-
-      document.querySelector('.hamburgermenu').addEventListener('click', function() {
-        slideout.toggle();
-      });
-    </script>
-
-  
-		<div class="top">
-
-			<div class= "topmiddle">
-				<div class="profilewrap">
-					<img id="profile" src="profile.jpg">
+		<div id = "intro">
+			<img id = 'background' src="highlineiii.jpg">
+			<div id = 'leftside'>
+				<div id = 'leftbar'>
+					<div id = 'name'>
+						<h1 id = 'fname'>Alexander Guevara
+						</h1>
+						<h3 id = 'title'> Front End Developer
+						</h3>
+					</div>
+					<div id = 'bar'>
+					</div>
 				</div>
+				
+			</div>	
 
-				<div class="logo">
-					<div class="wrap">
-						<a href="https://www.linkedin.com/in/alexanderguevara/"><img id = "linkedin" src="linkedin.png"></a>
-						<a href="https://github.com/ague26"><img id = "octocat" src="octocat.png"></a>
-					</div>	
+			<div id = 'rightside'>
+				<div id = 'upbar'>
+				</div>
+				<div id ='menu'>
+					<div id='horizontal'>
+						<div class='nav' id='About'>
+							<p>About Me</p>
+						</div>
+						<div class='nav' id= 'Portfolio'>
+							<p>Portfolio</p>
+						</div>
+						<div class='nav' id='Resume'>
+							<p>Resume</p>
+						</div>
+					</div>
+					<!-- <ul id = 'hamburger'>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>	 -->
 				</div>
 			</div>
-				
 		</div>
+		<div id = "middle">
+			<div id = 'leftside'>
+				<div id = 'leftbar'>
+					
+					<div id = 'bar'>
+					</div>
+				</div>
+				<button>Return the vertical position of the scrollbar</button>
+			</div>	
 
-		<div class="middle">
-			<div class="bio">
-				<p> Hey! My name is Alexander Guevara, and I am an aspiring web/mobile developer. Born and raised in NYC, I have experienced the art, food, and cultural diversity it has to show. Always entering with an open-mind, I enjoy listening to the stories/adventures of people's lives as each and every person has a unique story to tell.</p>
+		</div>
+		
 
-				<p> In my personal time, I enjoy playing in nature's playground - hiking and climbing through mountainous trails, kayaking on beautiful waters, or simply getting lost on the road during spontaneous trips are just some of the many activities that I try to incorporate into my life as much as I can. Every escapade is an added chapter to my life. </p>
-
-				<p>Aside from this, I also participate in projects ranging from developing data structures to designing websites and mobile apps. For more info, just take a look at my <a href="https://www.dropbox.com/s/kllwl0hlaoglnlr/Resume_2017.pdf?dl=0">Resume</a>  or my other social links above. You can also email me at <span style="font-weight:bold; font-style: italic;">alexgue26@hotmail.com</span>. Thanks for taking the time to visit my website!</p>
-
-				
-			</div>
-		</div>	
-	<body>
-
+	</body>	
 
 </html>
-
