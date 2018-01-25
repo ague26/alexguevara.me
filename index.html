@@ -1,176 +1,108 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta name="viewport" content="initial-scale=1">
-		<meta name="viewport" content="width=device-width">
-		<script
-		  src="https://code.jquery.com/jquery-3.2.1.js"
-		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-		  crossorigin="anonymous">
-		</script>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,400|Chivo" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-			$(document).ready(function() {
-					$("#fname").animate({'margin-left': '+=40%'}, 2000);
-					$("#role").animate({'margin-left': '+=40%'}, 2000);
-	   				$("#bar").animate({'margin-left': '+=83%'}, 2000);
-	   				$("#upbar").animate({'margin-top': '+=100vh'}, 2000);
-				});
-			// $(document).ready(function(){
-			// 	$('#hamburger').hover(function(){
-			// 		$('li').css({'width':'95%','transition-duration':'.5s'});
-			// 		}, function(){
-			// 		$('li:nth-child(1)').css({'width':'85%','transition-duration':'.5s'}),
-			// 		$('li:nth-child(3)').css({'width':'78%','transition-duration':'.5s'});
-			// 	});
-			// });
-
-			
-			$(document).ready(function(){
-				$(window).scroll(function() {
-		            if ($(window).scrollTop() > 250) {
-		                $('#bartwo').animate({"height":"+100%"},5000)
-		            } 
-		        });
-			});
-			$(document).ready(function(){
-				$(window).scroll(function() {
-		            if ($(window).scrollTop() > 423) {
-		                $('#lefthand').fadeIn(4000),
-		                $('#wrapcontainer').fadeIn(4000)
-		            }    
-		        });
-			});
-			$(document).ready(function(){
-				$('#lsoza').click(function(){
-					$('#lindasoza').show()
-				})
-			});
-			$(document).ready(function(){
-				$('#nativeapp').click(function(){
-					$('#project').show()
-				})
-			});
-			$(document).ready(function(){
-				$('.modal').click(function(){
-					$('.modal').hide()
-				});
-			});
-			$(document).ready(function(){
-				$(window).scroll(function() {
-		            if ($(window).scrollTop() > 423) {
-		                $('#lefthand').fadeIn(4000),
-		                $('#wrapcontainer').fadeIn(4000)
-		            }    
-		        });
-			});
-			$(document).ready(function($) {
-				$('#about').click(function(){
-				    $('html, body').animate({
-				        scrollTop: $( $(this).attr('href') ).offset().top
-				    }, 500);
-				    return false;
-				});
-			});
-			
-		</script>
-		<style>
-			*{
-			margin:0;
-			padding:0;
-			}
-		</style>
-	</head>
-
-
-	<body>
-		<div id = "intro">
-			<img id = 'background' src="highlineiii.jpg">
-			<div class = 'leftside'>
-				<div id = 'name'>
-					<div id = 'title'>
-						<h1 id = 'fname'>Alexander Guevara
-						</h1>
-						<h3 id = 'role'> Full Stack Developer
-						</h3>
-					</div>
-				</div>
-				<div id = 'leftbar'>
-					<div id = 'bar'>
-					</div>
-				</div>
-				
-			</div>	
-
-			<div class = 'rightside'>
-				<div id = 'upbar'>
-				</div>
-				
-					<div id='horizontal'>
-						<div class='nav'>
-							<a href="#summarywrap" id="about">About Me</a>
-						</div>
-						<div class='nav'>
-							<a href="#portfolio" id="portnav">Portfolio</a>
-						</div>
-						<div class='nav'>
-							<a href="https://www.dropbox.com/s/kllwl0hlaoglnlr/Resume_2017.pdf?dl=0">Resume</a>
-						</div>
-					</div>
-					<!-- <ul id = 'hamburger'>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul> -->	
-				
-			</div>
-		</div>
-
-		<div id = "middle">
-			<div class = 'leftside' id='lefthand'>
-<!-- 				<button>Return the vertical position of the scrollbar</button>
--->				<div id='summarywrap'>
-					<p >Hey! My name is Alexander Guevara, and I am an aspiring web/mobile developer. Born and raised in NYC, I have experienced the art, food, and cultural diversity it has to show. Always entering with an open-mind, I enjoy listening to the stories/adventures of people's lives as each and every person has a unique story to tell.</p>
-					<p>   In my personal time, I enjoy playing in nature's playground - hiking and climbing through mountainous trails, kayaking on beautiful waters, or simply getting lost on the road during spontaneous trips are just some of the many activities that I try to incorporate into my life as much as I can. Every escapade is an added chapter to my life.</p>
-					<p>Aside from this, I also participate in projects ranging from developing data structures to designing websites and mobile apps. For more info, just take a look at my <a href="https://www.dropbox.com/s/kllwl0hlaoglnlr/Resume_2017.pdf?dl=0">Resume</a> or my other social links above. You can also email me at alexgue26@hotmail.com. Thanks for taking the time to visit my website!
-					</p>
-				</div>
-				<div id='portfolio'>
-					<div id="imgwrap">
-						<img class='images' id='lsoza' src="lindasoza.png">
-						<img class='images' id='nativeapp' src="project.png">	
-					</div>
-				</div>
- 			</div>
-
- 			<div class ='rightside' id ='righthand'>
- 				<div id ='bartwo'>
- 				</div>
- 				<div id= 'wrapcontainer'>
- 					<img id ='profile' src="profile.jpg">
- 					<a href="https://www.linkedin.com/in/alexanderguevara/"><img class='socialmedia' src="linkedin.png"></a>
-					<a href="https://github.com/ague26"><img class='socialmedia' src="octocat.png"></a>
- 				</div>
- 			</div>
-
- 			<div class='modal' id='lindasoza' >
- 				<div class ='modal-container'>
- 					<img src='lindasoza.png'>
- 					<p>With 5+ years of experience. This website allows her to reach new clients across the globe.   </p>
- 				</div>
- 			</div>
- 			<div class='modal' id="project">
- 				<div class ='modal-container'>
- 					<img src='project.png'>
- 					<p>A React Native App for both iOS and Android. A current project that is still in the developmental phase. Launch date Q1 2018</p>
- 				</div>
- 			</div>
-
-		</div>
-		
-
-	</body>	
-
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,400|Fjalla+One" rel="stylesheet">
+  </head>
+  <body>
+    <div id="intro">
+      <img src="images/highlineiii.jpg" id="background" >
+      <div id="header" class="container-fluid px-0 h-100 text-center">
+        <div class="row h-100 mr-0">
+          <div id="sometitle" class="col-7 h-75 pr-0">
+                <h1>Alexander Guevara</h1>
+                <h5>Full Stack Developer</h5>
+                <div id="barWrapper" class="progress"> 
+                </div>              
+               <div id="scrollWrapper">
+                <a id="scroll" href="#end">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </a>
+              </div>            
+          </div>
+          <div class="col-5">
+            <div id="downWrapper" class="progress h-100">    
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div id="middle">
+      <div id="capabilities" class="container-fluid pt-3">
+        <div class="row text-center">
+          <div class="col-sm-3 mt-2"><h1>Capabilities</h1></div>
+          <div class="col-sm-3"><img class="img-thumbnail w-75" alt="webdesign" src="images/webDesign.png"><p class="pt-2">Web Designs</p></div>
+          <div class="col-sm-3"><img class="img-thumbnail w-75" alt="webApp" src="images/webApp.jpeg"><p class="pt-2">Web Applications</p></div>
+          <div class="col-sm-3"><img class="img-thumbnail w-75" alt="webApp" src="images/mobileApp.jpeg"><p class="pt-1">Mobile Applications</p></div>
+        </div>
+      </div>
+      <div id="skills" class="container-fluid pt-3">
+        <div class="row text-center">
+          <div class="col-sm-3 mt-4"><h1>Skills</h1></div>
+          <div class="col-sm-3"><img class="img-thumbnail w-50" alt="webdesign" src="images/HTML5.png"><p class="pt-2">Html5</p></div>
+          <div class="col-sm-3"><img class="img-thumbnail w-50" alt="webdesign" src="images/css3.png"><p class="pt-2">CSS3</p></div>
+          <div class="col-sm-3"><img class="img-thumbnail w-50" alt="webdesign" src="images/bootstrap4.png"><p class="pt-2">Bootstrap 4</p></div>
+          <div class="col-sm-3"><img class="img-thumbnail w-75" alt="webdesign" src="images/reactnative.png"><p class="pt-2">React Native</p></div>
+          <div class="col-sm-3"><img class="img-thumbnail w-75" alt="webdesign" src="images/firebase.png"><p class="pt-2">Firebase</p></div>
+          <div class="col-sm-3"><img class="img-thumbnail" alt="webdesign" src="images/reactjs.png"><p class="pt-2">React js</p></div>
+          <div class="col-sm-3"><img class="img-thumbnail w-50" alt="webdesign" src="images/jquery.png"><p class="pt-2">jQuery</p></div>
+          <div class="col-sm-3"><img class="img-thumbnail w-50" alt="webdesign" src="images/nodejs.jpeg"><p class="pt-2">Node.js</p></div>
+        </div>
+      </div>
+      <div id="end" class="container-fluid text-center px-0 pb-5">
+        <div class="row mx-0">
+          <div class="col-sm-6">
+            <img src="images/profile.jpg" id="profile" class="img-fluid rounded-circle mt-4" alt="profile image">
+            <h1 class="m-auto pt-2 ">About Me</h1>
+            <p class="m-auto w-75 p-2">Hey! My name is Alexander Guevara, and I am an aspiring web/mobile developer. Born and raised in NYC, I have experienced the art, food, and cultural diversity it has to show. Always entering with an open-mind, I enjoy listening to the stories/adventures of people's lives as each and every person has a unique story to tell.</p>
+            <p class="m-auto w-75 p-3">I participate in projects ranging from developing data structures to designing websites and mobile apps. For more info, just take a look at my <a href="Alexander_Guevara_Resume 2017.pdf" target="_blank">Resume</a> or my other social links below. You can also email me at <a href="mailto:alexgue26@hotmail.com">alexgue26@hotmail.com</a>.</p>
+            <div id="links" class="container-fluid text-center">
+              <div class="row pt-2 w-50 m-auto">
+                <div class="col-sm-6">
+                  <img class="img-thumbnail w-50 p-auto" alt="webdesign" src="images/Linkedin.png">
+                  <h5><a class="badge badge-light" href="https://www.linkedin.com/in/alexanderguevara/">Linkedin</a></h5>
+                </div>
+                <div class="col-sm-6">
+                  <img class="img-thumbnail w-50" alt="webdesign" src="images/github.png">
+                  <h5><a class="badge badge-light" href="https://github.com/ague26">GitHub</a></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <h1 class="my-4">Portfolio</h1>
+            <div class="col-12">
+              <a href="http://www.lindasoza.com"><img class="thumbnail w-50" src="images/lindasoza.png" alt= "lindasoza"></a>
+              <h6 class="w-50 m-auto pt-2">Linda Soza-Immigration Paralegal</h6>
+              <p>(HTML5, CSS, jQuery)</p>
+              
+            </div>
+            <div class="col-12 py-3">
+              <a href="http://alexguevara.me/BigSecret/bigsecret.html">
+              <img class="thumbnail w-50" src="images/time.png" alt="time website"></a>
+              <h6 class="pt-2">Countdown (Bootstrap4)</h6>
+            </div>
+            <div class="col-12">
+              <a href="http://alexguevara.me/spotfinder/index.html">
+              <img class="thumbnail w-25" src="images/project.png" alt="project"></a>
+              <h6 class="m-auto pt-2">Spotfinder</h6>
+              <p>React Native-mobile application</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
 </html>

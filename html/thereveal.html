@@ -1,0 +1,68 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>The Reveal</title>
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous">
+    </script>
+    <style>
+      .background {
+        height: 100%;
+        width:100%;
+        opacity: .9;
+        z-index: -1;
+        position: absolute;
+      } 
+      p{
+        font-family: 'Courgette', cursive;
+        width:100%;
+        margin: auto;
+        font-size:3em;
+        padding-top: 10%;
+        text-align: center;
+      }
+      .pics{
+        width: 90%;
+        margin: auto;
+        margin-top: 10%;
+      }
+      .couple{
+        width: 25%;
+        padding-right: 5%
+      }
+      .baby{
+        width: 25%;
+        margin-bottom: 4%;
+      }
+      @media screen and (max-width: 800px) and (max-height: 800px) {
+        .background{
+          height:115%;
+        }
+        .pics{
+          text-align: center;
+        }
+        .couple{
+          width: 50%;
+        }
+        .baby{
+          width: 60%;
+        }
+       }
+    </style>
+  </head>
+  <body>
+    <img class="background" src="life.jpeg">
+      <p> A little bit of <span style="color:pink">heaven</span> sent down to earth</p>
+    <div class='pics'>
+      <img class="couple" src="heartcouplehands.jpg">
+      <img class="baby" src="baby.jpg">
+    </div>
+  
+
+  </body>
+</html>
