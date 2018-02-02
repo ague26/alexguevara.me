@@ -4,7 +4,7 @@
 	</head>
 
 	<body>
-		<canvas id="gameCanvas" width="800" height="600">
+		<canvas id="gameCanvas" width="1000" height="600">
 		</canvas>
 
 	</body>
@@ -15,7 +15,7 @@
 		var canvas;
 		var canvasContext;
 		var ballX = 50;
-		var ballSpeedX = 10;
+		var ballSpeedX = 13;
 		var ballY = 50;
 		var ballSpeedY = 4;
 		var paddle1Y = 250;
@@ -38,7 +38,7 @@
 			};
 
 		}
-
+		//Function resets scores to 0 and display Pong canvas
 		function handleMouseClick(evt){
 			if(resetGame){
 				player1Score=0;
@@ -67,6 +67,7 @@
 				})
 
 		}
+		//If there is a game winner, then the var of resetGame is set to true, if not then ball is set to middle of canvas
 		function ballRest(){
 			if (player1Score >= gameWinner || player2Score >= gameWinner){
 				resetGame = true;
@@ -75,7 +76,7 @@
 			ballX = canvas.width/2;
 			ballY = canvas.height/2;
 		}
-
+		//Computer movement for the computer
 		function computerMovement(){
 			var paddle2YCenter = paddle2Y + (paddleHeight/2);
 			if (paddle2YCenter < ballY - 35){
@@ -85,7 +86,7 @@
 				paddle2Y = paddle2Y - 6;
 			}
 		}
-
+		//if resetGame is true then display is gone. This function also controls the ball movement and notifies when to activate ballRest
 		function moveEverything(){
 			if(resetGame){
 				return;
@@ -123,7 +124,7 @@
 			}
 	
 		}
-
+		//function that draws the net 
 		function drawNet(){
 			for(i=0;i<canvas.height;i= i + 40){
 				colorRect(canvas.width/2-1, i, 2, 20,"white");
