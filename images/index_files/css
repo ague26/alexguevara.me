@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fjalla One'), local('FjallaOne-Regular'), url(https://fonts.gstatic.com/s/fjallaone/v5/Yq6R-LCAWCX3-6Ky7FAFrOF6lDouQb4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Montserrat Thin'), local('Montserrat-Thin'), url(https://fonts.gstatic.com/s/montserrat/v12/JTUQjIg1_i6t8kCHKm45_QpRyS7g0dR9pA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_aZA3gnD-Px3rCs.woff) format('woff');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459WlhzSTh89Y.woff) format('woff');
+}

@@ -88,14 +88,8 @@
 }
 #downWrapper{
 	width:4px;
-  height: 100%;
-	margin-top: -108vh;
-}
-#nav a{
-  color: white;
-}
-#nav h5{
-  font-size: 1rem;
+	margin-top: -100%;
+
 }
 #capabilities{
 	background-color: #FDB813;
@@ -128,8 +122,11 @@ hr{
 #end h1{
   font-family: 'Fjalla One', sans-serif;
 }
+#links{
+  background-color: rgba(255,255,255,0.1);
+}
 @media screen and (max-width: 800px) and (max-height: 800px) {
-  #header h1{
-    font-size: 2em;
-  }
+#header h1{
+  font-size: 2em;
+}
 }
