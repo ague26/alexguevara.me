@@ -144,14 +144,15 @@
 }
 .languages div{
   width: 30%;
+	vertical-align: middle; 
 }
 .listed-skills div p{
   font-size: 20px;
   margin: 0;
 }
 .listed-skills div svg{
-  display:inline-block;
-  min-width: 180px;
+  min-width: 150px;
+  max-width: 200px;
   width:100%;
   fill:none;
   stroke:#fff;
@@ -450,4 +451,55 @@ svg:hover .node{
 }
 .listed-tools ul{
   list-style: none;
+}
+@media only screen and (max-width: 950px) {
+ .typewriter h1 {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .intro{
+    height: auto;
+  }
+ .typewriter h1 {
+    font-size: 30px;
+    letter-spacing: normal;
+  }
+  .description p{
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 560px) {
+ .typewriter h1 {
+    font-size: 25px;
+  }
+  .typewriter p{
+  font-size: 20px;
+  }
+  .languages div{
+    width: 100%;
+  }
+  #html-container, #css-container,#sass-container{
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .intro{
+    height: auto;
+  }
+ .typewriter h1 {
+    animation: unset;
+    border-right: none;
+    white-space: normal;
+    text-align: center;
+  }
+  .typewriter p{
+  font-size: 20px;
+  }
+  .languages div{
+    width: 100%;
+  }
+  #html-container, #css-container,#sass-container{
+    margin-top: 40px;
+  }
 }
