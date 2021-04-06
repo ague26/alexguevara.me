@@ -1,0 +1,453 @@
+.intro{
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+  max-height: 450px;
+  align-items: flex-end;
+}
+.profile{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+.typewriter h1 {
+  color: #2B3784;
+  font-size: 40px;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+.typewriter p{
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+.typewriter span{
+  color:#DF1F2D;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+.profile .img-container{
+  background-color: #447BBE;
+  border-radius: 105px;
+  width: 200px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 30px;
+}
+.profile .img-container img{
+  width: 145px;
+  position: absolute;
+  bottom: 0;
+}
+.img-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.img-container img{
+  width: 40%;
+}
+.description{
+  background-color: #B11313;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 200px 0;
+}
+.description > *{
+  color: white;
+  margin-top: 0;
+}
+.description p{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 70%;
+  margin: auto;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+.description p a{
+  color:#447BBE;
+  text-decoration: none;
+  font-weight: bold;
+}
+.description p a:hover{
+  font-size: 25px;
+}
+.skills-section{
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.skills-section .skills{
+  width: 90%;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  top: -100px;
+  background-color: white;
+  margin: auto;
+  border-radius: 30px;
+}
+.programming-language{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  border:3px solid #B11313;
+  border-right: 2px solid #B11313;
+  justify-content: space-around;
+  padding: 70px 0;
+}
+.programming-language h2{
+  color: #2B3784;
+}
+.programming-language .img-container{
+  width: 150px;
+}
+.listed-skills{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.listed-skills .languages{
+  padding: 0;
+  font-weight: 300;
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 90%; */
+  margin-bottom: 0px;
+  justify-content: center;
+}
+.languages div{
+  width: 30%;
+}
+.listed-skills div p{
+  font-size: 20px;
+  margin: 0;
+}
+.listed-skills div svg{
+  display:inline-block;
+  min-width: 180px;
+  width:100%;
+  fill:none;
+  stroke:#fff;
+  background-color: white;
+  z-index: 1;
+}
+/*------- React animation -------------*/
+#react-container svg{
+  stroke-width:15;
+  stroke-miterlimit:5;
+}
+#react-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+#react-container p{
+  position: absolute;
+  transition: top 2.5s,;
+}
+.react{
+  stroke-dasharray:4000;
+}
+svg:hover .react{
+  -webkit-animation:react 4.5s linear forwards;
+  animation:react 4.5s linear forwards;
+  
+  }
+@keyframes react { 
+  0%{
+    stroke-dashoffset: 4000;
+  } 
+  10%{
+    stroke-dashoffset: 3500;
+  }
+  20%{ 
+    stroke-dashoffset: 3000;
+  }
+  30%{ 
+    stroke-dashoffset: 2500;
+  }
+  40%{
+    stroke-dashoffset: 2000;
+  }
+  50%{
+    stroke-dashoffset: 1500;
+  } 
+  60%{
+    stroke-dashoffset: 0;
+  }
+  /* 70%{
+    stroke-dashoffset: 500;
+  } */
+  90%{
+    fill: rgb(97, 218, 251);
+  }
+  100%{
+    fill: rgb(97, 218, 251);
+    stroke: transparent;
+  }
+}
+/*------- Nextjs animation -------------*/
+#nextjs-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+#nextjs-container p{
+  position: absolute;
+  transition: top 2s,;
+}
+.nextjs{
+  stroke-dasharray:1000;
+}
+svg:hover .nextjs{
+  -webkit-animation:nextjs 4.5s linear forwards;
+  animation:nextjs 4.5s linear forwards;
+  
+  }
+@keyframes nextjs { 
+  0%{
+    stroke-dashoffset: 1000;
+  } 
+  50%{
+    stroke-dashoffset: 500;
+  } 
+  60%{
+    stroke-dashoffset: 0;
+  }
+  80%{
+    fill: rgb(0,0,0);
+  }
+  100%{
+    fill: rgb(0,0,0);
+    stroke: transparent;
+  }
+}
+/*------- Html animation -------------*/
+#html-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+#html-container p{
+  position: absolute;
+  transition: top 2s,;
+}
+.html{
+  stroke-dasharray:3000;
+  stroke-width: 10;
+}
+svg:hover .html{
+  -webkit-animation:html 4.5s linear forwards;
+  animation:html 4.5s linear forwards;
+  }
+@keyframes html { 
+  0%{
+    stroke-dashoffset: 3000;
+  } 
+  50%{
+    stroke-dashoffset: 500;
+  } 
+  60%{
+    stroke-dashoffset: 0;
+  }
+  70%{
+    fill:#e44d26;
+  }
+  100%{
+    fill: #e44d26;
+    stroke: transparent;
+  }
+}
+/*------- Css animation -------------*/
+#css-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+#css-container p{
+  position: absolute;
+  transition: top 2s,;
+}
+.css{
+  stroke-dasharray:3000;
+  stroke-width: 10;
+}
+svg:hover .css{
+  -webkit-animation:css 4.5s linear forwards;
+  animation:css 4.5s linear forwards;
+  }
+@keyframes css { 
+  0%{
+    stroke-dashoffset: 3000;
+  } 
+  50%{
+    stroke-dashoffset: 500;
+  } 
+  60%{
+    stroke-dashoffset: 0;
+  }
+  70%{
+    fill:#264de4;
+  }
+  100%{
+    fill: #264de4;
+    stroke: transparent;
+  }
+}
+/*------- Sass animation -------------*/
+#sass-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+#sass-container p{
+  position: absolute;
+  transition: top 2s,;
+}
+.sass{
+  stroke-dasharray:4500;
+  stroke-width: 10;
+}
+svg:hover .sass{
+  -webkit-animation:sass 4.5s linear forwards;
+  animation:sass 4.5s linear forwards;
+  }
+@keyframes sass { 
+  0%{
+    stroke-dashoffset: 4500;
+  } 
+  50%{
+    stroke-dashoffset: 500;
+  } 
+  60%{
+    stroke-dashoffset: 0;
+  }
+  /* 80%{
+    fill:#CD6799;
+  } */
+  100%{
+    fill:#CD6799;
+    stroke: transparent;
+  }
+}
+/*------- Git animation -------------*/
+#git-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+#git-container p{
+  position: absolute;
+  transition: top 2s,;
+}
+.git{
+  stroke-dasharray:1500;
+  stroke-width: 3;
+}
+svg:hover .git{
+  -webkit-animation:git 4.5s linear forwards;
+  animation:git 4.5s linear forwards;
+  }
+@keyframes git { 
+  0%{
+    stroke-dashoffset: 1500;
+  } 
+  50%{
+    stroke-dashoffset: 500;
+  } 
+  60%{
+    stroke-dashoffset: 0;
+  }
+  70%{
+    fill:#f05133;
+  }
+  100%{
+    fill: #f05133;
+    stroke: transparent;
+  }
+}
+/*------- Git animation -------------*/
+#node-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+#node-container p{
+  position: absolute;
+  transition: top 2s,;
+}
+.node{
+  stroke-dasharray:1500;
+  stroke-width: 5;
+}
+svg:hover .node{
+  -webkit-animation:node 4.5s linear forwards;
+  animation:node 4.5s linear forwards;
+  }
+@keyframes node { 
+  0%{
+    stroke-dashoffset: 1500;
+  } 
+  50%{
+    stroke-dashoffset: 500;
+  } 
+  60%{
+    stroke-dashoffset: 0;
+  }
+  70%{
+    fill:#333;
+  }
+  100%{
+    fill: #333;
+    stroke: transparent;
+  }
+}
+.dev-tools{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  border:3px solid #B11313;
+  border-left:1px solid #B11313;
+}
+.dev-tools .img-container{
+  margin-top: 30px;
+  width: 150px;
+}
+.listed-tools ul{
+  list-style: none;
+}
