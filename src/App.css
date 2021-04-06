@@ -460,6 +460,7 @@ svg:hover .node{
 @media only screen and (max-width: 800px) {
   .intro{
     height: auto;
+    margin-top: 50px;
   }
  .typewriter h1 {
     font-size: 30px;
