@@ -1,12 +1,15 @@
 import './App.css';
 import profile from "./images/me.png";
 import webDevelopment from "./images/webDesign.png";
-import codeIcon from "./images/code.png"
+import codeIcon from "./images/code.png";
+import hi from "./images/hey.png";
 import toolIcon from "./images/tools.png"
 import { useEffect, useState, useRef } from 'react';
 function App() {
-  const action = ["design", "accept challenges", "develop"]
+  const action = ["design", "accept challenges", "develop", "communicate"]
+  const adjective = ["Marvel enthusiast", "Aspiring developer", "Fitness fanatic", "Comic book enthusiast"]
   const [actionText, setactionText] = useState(action[0])
+  const [adjectiveText, setadjectiveText] = useState(adjective[0])
 
   const reactTitle = useRef()
   const nextjsTitle = useRef()
@@ -26,20 +29,31 @@ function App() {
   const cssAnimate = useRef(null)
   const gitAnimate = useRef(null)
   const nodeAnimate = useRef(null)
+  const rightImg = useRef()
 
   let i = 0
   const c = async () => {
-    setTimeout(() => {
-      setactionText(action[i])
-      i++
-      if (i < 3) {
+    i++
+    setactionText(action[i])
+    setadjectiveText(adjective[i])
+    if (i < 3) {
+      setTimeout(() => {
         c();
-      }
-      if (i === 3) {
-        i = 0
-        c()
-      }
-    }, 2000)
+      }, 4000)
+    }
+    if (i === 3) {
+      i = -1
+      setTimeout(() => {
+        c();
+      }, 4000)
+    };
+  }
+
+  const zoom = () =>{
+    rightImg.current.style.cssText = "left:300px";
+    setTimeout( () =>{
+      rightImg.current.style.cssText = "left:200px";
+    },4000)
   }
   const reactAnimation = () => {
     reactTitle.current.style.cssText = "top:-25px;transition:top 2.5s";
@@ -110,11 +124,22 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <div className="nav-container">
+        <div className="name-container">
+          <h1 className="name" onClick={zoom}>A<span>lexander</span> G<span>uevara</span></h1>
+          <img src={hi} ref={rightImg} alt="hey"></img>
+        </div>
+        <div className="nav">
+          <a href="#about">About</a>
+          <a href="#programming">Programming Languages</a>
+          {/* <a>Resume</a> */}
+        </div>
+      </div>
       <div className="intro">
         <div className="profile">
           <div className="typewriter">
-            <h1>Front End Developer and Mentor</h1>
-            <p>Person who loves to <span>{actionText}</span> </p>
+            <h2>Front End Developer and Mentor</h2>
+            <p>{adjectiveText} who loves to <span>{actionText}</span> </p>
           </div>
           <div className="img-container">
             <img src={profile} alt="" />
@@ -124,8 +149,8 @@ function App() {
       <div className="img-container">
         <img src={webDevelopment} alt="" />
       </div>
-      <div className="description">
-        <h1>Hey! How's it going?!</h1>
+      <div className="description" id="about">
+        <h2>Hey! How's it going?!</h2>
         <p>My name is Alexander Guevara, and I am a Software Engineer. Born and raised in NYC, I have
         experienced the art, food, and cultural diversity the city has to offer. I enjoy
         listening to the stories/adventures of people I meet as each and every person has a unique story to tell.
@@ -135,7 +160,7 @@ function App() {
       </div>
       <div className="skills-section">
         <div className="skills">
-          <div className="programming-language">
+          <div className="programming-language" id="programming">
             <div className="img-container">
               <img src={codeIcon} alt="" />
             </div>

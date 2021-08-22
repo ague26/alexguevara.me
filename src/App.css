@@ -1,18 +1,95 @@
+/* .pop-up-container{
+  visibility: hidden;
+  height: 85vh;
+  width: 100vw;
+  position: absolute;
+  top:15vh;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.pop-up-container .pop-up{
+  display: flex;
+  height: 0px;
+  width: 0px;
+  justify-content: center;
+  align-items: center;
+  background-color: white; */
+  /* transition: width 3s, height 3.0s; */
+/* }
+.pop-up .img-container{
+  width: 0%;
+  max-height: 500px;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  transition: width 4s;
+}
+.pop-up .img-container img{
+  width: 100%;
+  height: 100%;
+} */
+.nav-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  padding: 0 15%;
+  height: 15vh;
+  margin: auto;
+  background-color: #447BBE;
+}
+.nav-container .name-container{
+ width: 50%;
+ cursor: pointer;
+ position: relative;
+ display: flex;
+ align-items: center;
+}
+.name-container h1{
+  font-size: 40px;
+  letter-spacing: 3px;
+  color:white;
+  z-index: 1;
+  background-color: #447BBE;
+  padding: 2px 0;
+}
+.name-container h1 span{
+  font-size: 25px;
+}
+.name-container img{
+  width: 50px;
+  height: 50px;
+  left: 200px;
+  position: absolute;
+  transition: left .8s,;
+}
+.nav-container .nav{
+ width: 50%;
+ display: flex;
+ justify-content: flex-end;
+ color:white;
+}
+.nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: white;
+}
 .intro{
   display: flex;
   justify-content: center;
-  height: 60vh;
-  max-height: 450px;
   align-items: flex-end;
+  height: 49vh;
+  max-height: 400px;
 }
 .profile{
   display: flex;
   flex-direction:column;
   align-items: center;
 }
-.typewriter h1 {
+.typewriter h2 {
   color: #2B3784;
-  font-size: 40px;
+  font-size: 30px;
   font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
@@ -57,6 +134,7 @@
   width: 145px;
   position: absolute;
   bottom: 0;
+  height: initial;
 }
 .img-container{
   display: flex;
@@ -65,6 +143,7 @@
 }
 .img-container img{
   width: 40%;
+  height: 100%;
 }
 .description{
   background-color: #B11313;
@@ -355,9 +434,9 @@ svg:hover .sass{
   60%{
     stroke-dashoffset: 0;
   }
-  /* 80%{
+  80%{
     fill:#CD6799;
-  } */
+  }
   100%{
     fill:#CD6799;
     stroke: transparent;
@@ -453,7 +532,7 @@ svg:hover .node{
   list-style: none;
 }
 @media only screen and (max-width: 950px) {
- .typewriter h1 {
+ .typewriter h2 {
     font-size: 35px;
   }
 }
@@ -462,7 +541,7 @@ svg:hover .node{
     height: auto;
     margin-top: 50px;
   }
- .typewriter h1 {
+ .typewriter h2 {
     font-size: 30px;
     letter-spacing: normal;
   }
@@ -471,7 +550,7 @@ svg:hover .node{
   }
 }
 @media only screen and (max-width: 560px) {
- .typewriter h1 {
+ .typewriter h2 {
     font-size: 25px;
   }
   .typewriter p{
@@ -488,7 +567,7 @@ svg:hover .node{
   .intro{
     height: auto;
   }
- .typewriter h1 {
+ .typewriter h2 {
     animation: unset;
     border-right: none;
     white-space: normal;
