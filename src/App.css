@@ -532,16 +532,63 @@ svg:hover .node{
   list-style: none;
 }
 @media only screen and (max-width: 950px) {
- .typewriter h2 {
-    font-size: 35px;
+  .nav-container .name-container{
+    width: 100%;
+    justify-content: center;
   }
-}
-@media only screen and (max-width: 800px) {
-  .intro{
+  .nav-container .nav{
+    display:  none;
+  }
+   .intro{
     height: auto;
     margin-top: 50px;
   }
  .typewriter h2 {
+    font-size: 35px;
+  }
+  .profile .img-container{
+    width: 170px;
+    height: 150px;
+  }
+  .profile .img-container img{
+    width: 125px;
+  }
+  .img-container img{
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .nav-container{
+    height: auto;
+  }
+  .nav-container .name-container{
+    width: 100%;
+    justify-content: center;
+  }
+  .name-container h1{
+  padding: unset;
+  }
+  .name-container img{
+    display: none;
+  }
+  .nav-container .nav{
+    display:  none;
+  }
+  .intro{
+    height: auto;
+    margin-top: 50px;
+  }
+  .profile .img-container{
+    width: 170px;
+    height: 150px;
+  }
+  .profile .img-container img{
+    width: 125px;
+  }
+  .img-container img{
+    width: 55%;
+  }
+  .typewriter h2 {
     font-size: 30px;
     letter-spacing: normal;
   }
