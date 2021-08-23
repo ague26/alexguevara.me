@@ -564,6 +564,17 @@ svg:hover .node{
   }
 }
 @media only screen and (max-width: 460px) {
+  .nav-container{
+    width: 100%;
+    padding: unset;
+  }
+  .nav-container .name-container{
+    width: 100%;
+    justify-content: center;
+  }
+  .nav-container .nav{
+    display: none;
+  }
   .intro{
     height: auto;
   }
@@ -576,10 +587,57 @@ svg:hover .node{
   .typewriter p{
   font-size: 20px;
   }
+  .profile .img-container{
+    width: 130px;
+    height: 115px;
+  }
+  .profile .img-container img{
+    width: 100px;
+  }
+  .img-container img{
+    width: 80%;
+  }
   .languages div{
     width: 100%;
   }
   #html-container, #css-container,#sass-container{
     margin-top: 40px;
   }
+}
+@media only screen and (max-width: 380px) {
+  .nav-container{
+    padding: unset;
+  }
+  .nav-container .name-container{
+    justify-content: center;
+  }
+  .name-container h1{
+    font-size: 30px;
+  }
+  .name-container img{
+    display: none;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* .nav-container{
+    padding: unset;
+  }
+  .nav-container .name-container{
+    justify-content: center;
+  }
+  .name-container h1{
+    font-size: 20px;
+  }
+  .name-container h1 span{
+    font-size: 15px;
+  }
+  .name-container img{
+    display: none;
+  }
+  .typewriter h2{
+    font-size: 13px;
+  }
+  .typewriter p{
+    font-size: 13px;
+  } */
 }

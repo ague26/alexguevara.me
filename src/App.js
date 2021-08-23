@@ -51,6 +51,7 @@ function App() {
 
   const zoom = () =>{
     rightImg.current.style.cssText = "left:300px";
+    // console.log(rightImg.current.style.left)
     setTimeout( () =>{
       rightImg.current.style.cssText = "left:200px";
     },4000)
